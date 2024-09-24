@@ -22,7 +22,7 @@ const Header = () => {
           <Link to='/'>
           <img className='header_logo'
           src='https://www.thesun.co.uk/wp-content/uploads/2022/02/Amazon-Logo-1024x426-1.png'
-          alt="Amazon logo" />
+          alt="" />
           </Link>
           <div className='header_search'>
             <input className='header_input' type='text' />
@@ -30,15 +30,16 @@ const Header = () => {
           </div>
           <div className='header_nav'>
             <Link to={!user && '/login'}>
-              <div className='header_option'>
-                <span className='header_optionOne' onClick={handleAuthentication}>
-                Hello {!user ? "Guest" : user.email}
-                </span>
-                <span className='header_optionTwo'>
-                  {user ? "Sign Out" : "Sign In"}
-                  </span>
-              </div>
-            </Link>
+  <div className='header_option' onClick={handleAuthentication}>
+    <span className='header_optionOne'>
+      Hello {!user ? "Guest" : user.email}
+    </span>
+    <span className='header_optionTwo'>
+      {user ? "Sign Out" : "Sign In"}
+           </span>
+           </div>
+        </Link>
+
           
         
             <div className='header_option'>

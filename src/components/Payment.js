@@ -49,10 +49,11 @@ const Payment = () => {
    })
    };
 
-    const handleChange = (e) => {
-        setDisabled(e.empty);
-        setError(e.error ? "e.error.message" : "");
-    };
+   const handleChange = (e) => {
+    setDisabled(e.empty);
+    setError(e.error ? e.error.message : "");
+  };
+  
   return (
     <div className='payment'>
      <div className='payment_container'>
@@ -86,7 +87,7 @@ const Payment = () => {
             <div className='payment_title'>
                 <h3>Payment method</h3>
             </div>
-            <div className='patment_details'>
+            <div className='payment_details'>
                 {/* {Stripe code will go here} */}
                 <form onSubmit={handleSubmit}>
                     <CardElement onChange={handleChange}/>
